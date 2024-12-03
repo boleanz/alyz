@@ -29,7 +29,7 @@
     }
     h1 {
       font-size: 4rem;
-      color: #00ff00;
+      color: #ffffff;
       text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0f0, 0 0 80px #0f0;
       margin: 0;
     }
@@ -38,36 +38,25 @@
         50% { opacity: 0.2; }
         100% { opacity: 1; }
     }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-      }
-      button {
-        font-size: 1rem;
-        padding: 8px 16px;
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-      button {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-      }
-    }
     button {
       position: absolute;
       z-index: 10;
-      padding: 10px 20px;
-      font-size: 20px;
+      width: 168rem;
+      height: 128rem;
       background-color: #00ff00;
+      background: url('https://media.discordapp.net/attachments/1307933676440522782/1310608168635600956/Jujinnn-enhanced.png?ex=674f10f9&is=674dbf79&hm=f436ecea8ac927e59f33338365ff90284cb3a47e2b642c7dfbb30cc56432eefc&=&format=webp&quality=lossless&width=1331&height=905') center/cover no-repeat;
       border: none;
-      color: black;
+      color: rgb(255, 242, 242);
       cursor: pointer;
+      padding: 0;
+      font-size: 1.5em;
+      margin: 20px;
     }
-    button:hover {
-      background-color: #0f0;
+    pre {
+      font-size: 1.7rem;
+      margin: 0;
+      color: #ffffff;
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0f0, 0 0 80px #0f0;
     }
   </style>
 </head>
@@ -76,8 +65,10 @@
   <canvas id="matrix"></canvas>
   <div class="sinoname">
     <h1>I Love You Aly</h1>
-    <audio id="background-audio" src="https://raw.githubusercontent.com/boleanz/boleanz/main/damn.mp3" loop="true"></audio>
+    <audio id="background-audio" src="https://raw.githubusercontent.com/boleanz/boleanz/main/attention.mp3" loop="true"></audio>
+    <pre id="iplookz" class="iplookz">Fetching...</pre>
   </div>
+
   <script>
     const startButton = document.getElementById("startButton");
     const canvas = document.getElementById("matrix");
@@ -92,7 +83,7 @@
     function drawMatrix() {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#0f0";
+      ctx.fillStyle = "#ffffff";
       ctx.font = `${fontSize}px monospace`;
       drops.forEach((y, i) => {
         const text = letters[Math.floor(Math.random() * letters.length)];
@@ -114,6 +105,17 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+    function fetchIPAndInfo() {
+      fetch('https://api.ipify.org/?format=json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("iplookz").textContent = `MY HEART: ${data.ip}`;
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+    }
+    fetchIPAndInfo();
   </script>
 </body>
 </html>
