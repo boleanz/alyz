@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pabs Loves You</title>
+  <title>Create by Pabs</title>
   <style>
     body {
       margin: 0;
       font-family: 'Courier New', Courier, monospace;
-      color: #00ff00;
-      background: url('https://media.discordapp.net/attachments/1307933676440522782/1307936405510688768/Screenshot_2024-11-17_225451.png?ex=674f3bf3&is=674dea73&hm=bacd12b8f52348176f09a4304bb575cebb678b3858448b464bc938fc72cdbd32&=&format=webp&quality=lossless&width=1609&height=905') center/cover no-repeat;
+      color: #00ff0d;
+      background: url('https://media.discordapp.net/attachments/1307933676440522782/1307934793094270986/Screenshot202024-11-1720223930-enhanced.png?ex=674f3a72&is=674de8f2&hm=9a158b6739e2d331be15b86970e61878ea9cf40d0829af30d63880021ac6d978&=&format=webp&quality=lossless&width=550&height=309');
       overflow: hidden;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -30,8 +31,27 @@
     h1 {
       font-size: 2rem;
       color: #ffffff;
-      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0f0, 0 0 80px #0f0;
+      text-shadow: 0 0 5px #00ff0d, 0 0 10px #00ff0d, 0 0 20px #00ff0d, 0 0 40px rgb(255, 255, 255), 0 0 80px rgb(0, 255, 157);
       margin: 0;
+    }
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    .social-icons a {
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+    .social-icons img {
+      width: 48px;
+      height: 48px;
     }
     @keyframes flicker {
         0% { opacity: 1; }
@@ -41,26 +61,42 @@
     button {
       position: absolute;
       z-index: 10;
-      width: 80%;
-      max-width: 500px;
-      height: 200px;
-      background-color: #00ff00;
-      color: #000;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      color: #fff;
+      background-image: url('https://media.discordapp.net/attachments/1307933676440522782/1307934778552619008/Screenshot202024-11-1720223038-enhanced.png?ex=674f3a6f&is=674de8ef&hm=37161f6dbcf1512dac3ba520a7bb4a7b08b73ba37db0a8ed8634ae2f12b84062&=&format=webp&quality=lossless&width=550&height=307');
+      background-size: cover;
+      background-position: center;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-size: 1rem;
       margin: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    #buttonText {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      z-index: 2;
+      transition: opacity 0.3s ease;
     }
     button:hover {
-      background-color: #0f0;
+      background-color: rgb(0, 0, 0);
       color: #fff;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      color: #f71500;
+      background-image: url('https://media.discordapp.net/attachments/1307933676440522782/1307933879159750656/Screenshot202024-11-1720223028-enhanced.png?ex=674f3999&is=674de819&hm=c05e58f1e303354c9ab95dd9fd9953a0c4f8d733ba460234e5268aeeaf8c21ee&=&format=webp&quality=lossless&width=550&height=307');
+      background-size: cover;
+      background-position: center;
     }
     pre {
       font-size: 1rem;
       margin: 0;
       color: #ffffff;
-      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #0f0;
+      text-shadow: 0 0 5px #00ff0d, 0 0 10px #00ff0d, 0 0 20px #00ff0d, 0 0 40px rgb(3, 255, 158);
     }
     @media (min-width: 768px) {
       h1 {
@@ -76,15 +112,50 @@
   </style>
 </head>
 <body>
-  <button id="startButton">Click if you love me</button>
+  <button id="startButton"><span id="buttonText">Click me my heart</span></button>
   <canvas id="matrix"></canvas>
   <div class="sinoname">
-    <h1>I Love You Aly</h1>
-    <audio id="background-audio" src="https://raw.githubusercontent.com/boleanz/boleanz/main/attention.mp3" loop></audio>
+    <h1>Pabs DeBongzi Loves Aly</h1>
+    <div id="youtube-body"></div>
+    <audio id="background-audio" src="https://raw.githubusercontent.com/boleanz/boleanz/main/tanginanetoy.mp3" loop></audio>
     <pre id="iplookz" class="iplookz">Fetching...</pre>
+    <div class="social-icons">
+      <a href="https://discord.gg/kupalinogang " target="_blank" title="Kupalino Gang">
+        <img src="https://img.icons8.com/fluency/48/000000/discord-new-logo.png" alt="Discord">
+      </a>
+      <a href="https://www.tiktok.com/@broskiepabs" target="_blank" title="My TikTok">
+        <img src="https://img.icons8.com/fluency/48/000000/tiktok.png" alt="TikTok">
+      </a>
+    </div>
   </div>
   <script>
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player("youtube-body", {
+        videoId: "KNsPZjDDFWg",
+        playerVars: {
+          autoplay: 1,
+          loop: 1,
+          playlist: "KNsPZjDDFWg",
+          controls: 0,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          mute: 1,
+        },
+      });
+    }
     const startButton = document.getElementById("startButton");
+    const buttonText = document.getElementById("buttonText");
+    startButton.addEventListener("mouseover", () => {
+      buttonText.textContent = "Do you love me?";
+    });
+    startButton.addEventListener("mouseout", () => {
+      buttonText.textContent = "Click me my heart";
+    });
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
     const audio = document.getElementById("background-audio");
@@ -93,8 +164,8 @@
       canvas.height = window.innerHeight;
     }
     resizeCanvas();
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    const fontSize = 14;
+    const customText = "I LOVE YOU ALY DEGUZMAN ♥";
+    const fontSize = 20;
     let columns = Math.floor(canvas.width / fontSize);
     let drops = Array(columns).fill(1);
     function drawMatrix() {
@@ -102,9 +173,8 @@
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#ffffff";
       ctx.font = `${fontSize}px monospace`;
-
       drops.forEach((y, i) => {
-        const text = letters[Math.floor(Math.random() * letters.length)];
+        const text = customText[Math.floor(Math.random() * customText.length)];
         const x = i * fontSize;
         ctx.fillText(text, x, y * fontSize);
 
@@ -115,27 +185,27 @@
       });
       requestAnimationFrame(drawMatrix);
     }
+    function fetchIPAndInfo() {
+      fetch("https://api.ipify.org/?format=json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("iplookz").textContent = `ILY MY HEART: ${data.ip}`;
+      })
+      .catch(error => {
+        console.error("Throw Error:", error);
+      });
+    }
     startButton.addEventListener("click", () => {
       startButton.style.display = "none";
       drawMatrix();
-      audio.play().catch(err => console.error("Audio doesn't load:", err));
+      fetchIPAndInfo();
+      audio.play().catch(err => console.error("Audio hindi nag load kupal:", err));
     });
     window.addEventListener("resize", () => {
       resizeCanvas();
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(1);
     });
-    function fetchIPAndInfo() {
-      fetch("https://api.ipify.org/?format=json")
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById("iplookz").textContent = `MY HEART: ${data.ip}`;
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
-    }
-    fetchIPAndInfo();
   </script>
 </body>
 </html>
