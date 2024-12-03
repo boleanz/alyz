@@ -71,13 +71,13 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 3rem;
       margin: 10px;
       transition: background 0.3s ease, transform 0.3s ease;
     }
     #buttonText {
       color: white;
-      font-size: 1.5rem;
+      font-size: 3rem;
       font-family: 'Courier New', Courier, monospace;
       z-index: 2;
       transition: opacity 0.3s ease;
@@ -151,10 +151,10 @@
     const startButton = document.getElementById("startButton");
     const buttonText = document.getElementById("buttonText");
     startButton.addEventListener("mouseover", () => {
-      buttonText.textContent = "Do you love me?";
+      buttonText.textContent = "Yes?";
     });
     startButton.addEventListener("mouseout", () => {
-      buttonText.textContent = "Click me my heart";
+      buttonText.textContent = "Do you love me?";
     });
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
@@ -177,7 +177,6 @@
         const text = customText[Math.floor(Math.random() * customText.length)];
         const x = i * fontSize;
         ctx.fillText(text, x, y * fontSize);
-
         if (y * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
